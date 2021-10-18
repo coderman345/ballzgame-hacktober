@@ -57,7 +57,13 @@
 		transform: rotate(360deg);
 		}
 	}
-
+player_1_score {
+		height: 50px;
+		width: 50px;
+		color: chartreuse;
+		position: fixed;
+		left: 30vw;
+		margin-top: 30px;
 	.paddle {
 		height: 100px;
 		width: 18px;
@@ -111,7 +117,11 @@
 		color: #c9cbff;
 		left: 38vw;
 		margin: 30px auto auto auto;
-	}
+		margin: 30px auto auto auto;'ladmnv{OVn
+		795
+	}roaewigaewiorg843t
+		margin: 30px auto auto auto;
+	
 	</style>
 </head>
 	
@@ -198,7 +208,47 @@
 			paddle_2_coord.top + window.innerHeight * 0.1
 			) + 'px';
 		paddle_2_coord = paddle_2.getBoundingClientRect();
+		}	) + 'px';
+		paddle_1_coord = paddle_1.getBoundingClientRect();
+		}	) + 'px';
+		paddle_1_coord = paddle_1.getBoundingClientRect();
 		}
+		if (e.key == 's') {
+		paddle_1.style.top =
+			Math.min(
+			board_coord.bottom - paddle_common.height,
+			paddle_1_coord.top + window.innerHeight * 0.06
+			) + 'px';
+		paddle_1_coord = paddle_1.getBoundingClientRect();
+		}
+
+		if (e.key == 'ArrowUp') {
+		paddle_2.style.top =
+			Math.max(
+			board_coord.top,
+			paddle_2_coord.top - window.innerHeight * 0.1
+			) + 'px';
+		paddle_2_coord = paddle_2.getBoundingClientRect();
+		}
+		if (e.key == 'ArrowDown') {
+		if (e.key == 's') {
+		paddle_1.style.top =
+			Math.min(
+			board_coord.bottom - paddle_common.height,
+			paddle_1_coord.top + window.innerHeight * 0.06
+			) + 'px';
+		paddle_1_coord = paddle_1.getBoundingClientRect();
+		}
+
+		if (e.key == 'ArrowUp') {
+		paddle_2.style.top =
+			Math.max(
+			board_coord.top,
+			paddle_2_coord.top - window.innerHeight * 0.1
+			) + 'px';
+		paddle_2_coord = paddle_2.getBoundingClientRect();
+		}
+		if (e.key == 'ArrowDown') {
 	}
 	});
 
